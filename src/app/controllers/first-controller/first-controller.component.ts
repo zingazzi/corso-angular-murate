@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class FirstControllerComponent implements OnInit {
   primoNumero: number = 5;
+  variabileSettata: string;
 
   constructor() {
     console.log("primo controller - constructor");
@@ -14,5 +15,9 @@ export class FirstControllerComponent implements OnInit {
 
   ngOnInit() {
     console.log("primo controller - Init");
+  }
+
+  eseguiFunzioneAlClick(): void {
+    this.variabileSettata = "Nuovo valore";
   }
 }

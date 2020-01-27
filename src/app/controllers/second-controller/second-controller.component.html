@@ -1,0 +1,19 @@
+<h2>Oggetto singolo</h2>
+<p>
+  {{ utente.name }} {{ utente.surname }}<br>
+  {{ utente.email }}<br>
+  {{ utente.age }}
+</p>
+<h2>Lista Utenti</h2>
+<p *ngFor="let item of utenti">
+  {{ item.name }} {{ item.surname }}<br>
+  {{ item.email }}<br>
+  {{ item.age }}
+</p>
+<h2>IF</h2>
+<p *ngIf="utente.age > 30">
+ {{utente.name}} ha un età maggiore di 30 anni
+</p>
+<p *ngIf="utente.age < 30">
+ {{utente.name}} ha un età minore di 30 anni
+</p>

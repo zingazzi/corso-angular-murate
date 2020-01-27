@@ -1,0 +1,6 @@
+<img *ngIf="showCover" src="{{ libro.cover }}" width="300">
+<h3 (click)="mostraCover()">
+  {{ libro.title }}
+</h3>
+<h4><i>{{ libro.author }}</i></h4>
+<p>p: {{ libro.pages }}</p>

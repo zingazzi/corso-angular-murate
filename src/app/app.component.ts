@@ -6,5 +6,26 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "Hello World";
+  title: string = "Hello World";
+
+  primoNumero: number = 4;
+  secondoNumero: number = 6;
+
+  booleano: boolean = true;
+
+  variabileStringaDaAssegnare: string;
+  variabileNumericaDaAssegnare: number;
+
+  getVariableResult(): string {
+    return "Variabile in una funzione";
+  }
+
+  quadratoDiNumeri() {
+    let risultato = this.primoNumero * this.primoNumero;
+    return risultato;
+  }
+
+  assegnaNumeroAVariabile(): void {
+    this.variabileNumericaDaAssegnare = this.secondoNumero * this.secondoNumero;
+  }
 }

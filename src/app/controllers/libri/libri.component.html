@@ -1,1 +1,4 @@
-<app-libro *ngFor="let item of libreria" [libro]="item"></app-libro>
+
+<div class="card-columns">
+    <app-libro class="card" *ngFor="let item of libreria" style="width: 18rem;" [libro]="item"></app-libro>
+</div>

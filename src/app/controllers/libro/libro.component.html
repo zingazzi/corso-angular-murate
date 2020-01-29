@@ -1,6 +1,8 @@
-<img *ngIf="showCover" src="{{ libro.cover }}" width="300">
-<h3 (click)="mostraCover()">
-  {{ libro.title }}
-</h3>
-<h4><i>{{ libro.author }}</i></h4>
-<p>p: {{ libro.pages }}</p>
+<img class="card-img-top" *ngIf="showCover" src="{{ libro.cover }}" width="300">
+<div class="card-body">
+  <h5 (click)="mostraCover()">
+    {{ libro.title }}
+  </h5>
+  <h4><i>{{ libro.author }}</i></h4>
+  <p>p: {{ libro.pages }}</p>
+</div>

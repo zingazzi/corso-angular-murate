@@ -1,16 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center; margin:20px;">
-  <input type="text" [(ngModel)]="moduleVar" (keyup)="resettaPalindrom()"> <button (click)="elaboraVariabileInput()">Submit</button><br>
+<!--Main Navigation-->
+<header>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="navbar-brand"><strong>ToDo List</strong></div>
+    </nav>
+</header>
 
-  {{ moduleVar }}
-
-  <p *ngIf="isPalindrom && moduleVar !== ''">
-    {{ moduleVar }} è palindromo
-  </p>
-</div>
-
-<div style="text-align:center">
-  <app-libri></app-libri>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <app-todos></app-todos>
+    </div>
+  </div>
 </div>
 
 

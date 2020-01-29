@@ -7,6 +7,8 @@ import { FirstControllerComponent } from "./controllers/first-controller/first-c
 import { SecondControllerComponent } from "./controllers/second-controller/second-controller.component";
 import { LibriComponent } from "./controllers/libri/libri.component";
 import { LibroComponent } from "./controllers/libro/libro.component";
+import { TodosComponent } from './controllers/todos/todos.component';
+import { TodoComponent } from './controllers/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LibroComponent } from "./controllers/libro/libro.component";
     FirstControllerComponent,
     SecondControllerComponent,
     LibriComponent,
-    LibroComponent
+    LibroComponent,
+    TodosComponent,
+    TodoComponent
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],

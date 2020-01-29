@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Todo } from "../../interface/todo.interface";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { TodosService } from "../../services/todos.service";
@@ -7,18 +7,19 @@ import { TodosService } from "../../services/todos.service";
   selector: "[app-todo]",
   templateUrl: "./todo.component.html",
   styleUrls: ["./todo.component.css"],
-  providers: [TodosService]
+  providers: []
 })
 export class TodoComponent implements OnInit {
   @Input() todo: Todo;
+  @Output("deleteTodo") deleteTodo = new EventEmitter();
 
   faTrash = faTrash;
 
-  constructor(private todoService: TodosService) {}
+  constructor() {}
 
   ngOnInit() {}
 
   removeTodo(): void {
-    this.todoService.removeTodo(this.todo.id);
+    this.deleteTodo.emit(this.todo.id);
   }
 }

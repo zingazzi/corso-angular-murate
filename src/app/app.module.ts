@@ -9,6 +9,7 @@ import { LibriComponent } from "./controllers/libri/libri.component";
 import { LibroComponent } from "./controllers/libro/libro.component";
 import { TodosComponent } from './controllers/todos/todos.component';
 import { TodoComponent } from './controllers/todo/todo.component';
+import { HeaderComponent } from './controllers/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TodoComponent } from './controllers/todo/todo.component';
     LibriComponent,
     LibroComponent,
     TodosComponent,
-    TodoComponent
+    TodoComponent,
+    HeaderComponent
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],

@@ -1,5 +1,9 @@
-<div class="card" style="width: 18rem;">
+<div *ngIf="todos.length > 0" class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
     <li app-todo class="list-group-item" *ngFor="let item of todos" [todo]="item"></li>
   </ul>
+</div>
+
+<div class="mt-2">
+<input type="text" [(ngModel)]="todoTask"> <button class="btn btn-primary" (click)="addTodo()">Add Todo</button>
 </div>

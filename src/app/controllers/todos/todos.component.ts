@@ -7,20 +7,21 @@ import { Todo } from "../../interface/todo.interface";
   styleUrls: ["./todos.component.css"]
 })
 export class TodosComponent implements OnInit {
-  todos: Todo[];
+  todos: Todo[] = [];
+  todoTask: string = "";
 
   constructor() {}
 
-  ngOnInit() {
-    this.todos = [
-      {
-        task: "Primo task",
+  ngOnInit() {}
+
+  addTodo(): void {
+    if (this.todoTask != "") {
+      let newTodo: Todo = {
+        task: this.todoTask,
         active: true
-      },
-      {
-        task: "Secondo task",
-        active: true
-      }
-    ];
+      };
+      this.todos.push(newTodo);
+      this.todoTask = "";
+    }
   }
 }

@@ -7,9 +7,11 @@ import { FirstControllerComponent } from "./controllers/first-controller/first-c
 import { SecondControllerComponent } from "./controllers/second-controller/second-controller.component";
 import { LibriComponent } from "./controllers/libri/libri.component";
 import { LibroComponent } from "./controllers/libro/libro.component";
-import { TodosComponent } from './controllers/todos/todos.component';
-import { TodoComponent } from './controllers/todo/todo.component';
-import { HeaderComponent } from './controllers/header/header.component';
+import { TodosComponent } from "./controllers/todos/todos.component";
+import { TodoComponent } from "./controllers/todo/todo.component";
+import { HeaderComponent } from "./controllers/header/header.component";
+
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { HeaderComponent } from './controllers/header/header.component';
     TodoComponent,
     HeaderComponent
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent]
 })

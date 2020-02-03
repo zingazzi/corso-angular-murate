@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
 import { FirstControllerComponent } from "./controllers/first-controller/first-controller.component";
@@ -12,6 +13,7 @@ import { TodoComponent } from "./controllers/todo/todo.component";
 import { HeaderComponent } from "./controllers/header/header.component";
 
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { PostsComponent } from "./controllers/posts/posts.component";
 
 @NgModule({
   declarations: [
@@ -22,9 +24,16 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     LibroComponent,
     TodosComponent,
     TodoComponent,
-    HeaderComponent
+    HeaderComponent,
+    PostsComponent
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
